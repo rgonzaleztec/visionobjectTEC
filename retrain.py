@@ -350,7 +350,7 @@ def checkIfNecessaryPathsAndFilesExist():
     for trainingSubDir in trainingSubDirs:
         # count how many images are in the current training sub-directory
         for fileName in os.listdir(trainingSubDir.loc):
-            if fileName.endswith(".JPG"):
+            if fileName.endswith(".jpg"):
                 trainingSubDir.numImages += 1
             # end if
         # end if
@@ -386,7 +386,7 @@ def checkIfNecessaryPathsAndFilesExist():
     # count how many images are in the test images directory
     numImagesInTestDir = 0
     for fileName in os.listdir(TEST_IMAGES_DIR):
-        if fileName.endswith(".JPG"):
+        if fileName.endswith(".jpg"):
             numImagesInTestDir += 1
         # end if
     # end for
@@ -624,7 +624,7 @@ def create_image_lists(image_dir, testing_percentage, validation_percentage):
         # ToDo: there then append (extend) those, not to get the name except the extension, then append an extension,
         # ToDo: this (current) way is error prone of the original file has an upper case or mixed case extension
 
-        extensions = ['JPG', 'jpeg']
+        extensions = ['jpg', 'jpeg']
         file_list = []
         tf.logging.info("Looking for images in '" + dir_name + "'")
         for extension in extensions:
